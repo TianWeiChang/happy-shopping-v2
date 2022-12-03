@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "mybatis-3-mapper.dtd">
+<mapper namespace="com.tian.dao.LoginLogMapper">
+    <resultMap id="loginLog" type="com.tian.entity.LoginLog">
+        <id property="id" jdbcType="BIGINT" column="id"/>
+        <result property="userId" jdbcType="BIGINT" column="user_id"/>
+        <result property="createTime" jdbcType="TIMESTAMP" column="create_time"/>
+    </resultMap>
+
+    <insert id="insertOne" parameterType="com.tian.entity.LoginLog">
+        insert into tb_login_log(id,user_id,create_time)
+        values (#{id, jdbcType=BIGINT}, #{userId, jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP})
+    </insert>
+
+    <select id="selectByUserId" resultMap="loginLog">
+        SELECT * FROM tb_login_log where user_id = #{userId}
+    </select>
+</mapper>

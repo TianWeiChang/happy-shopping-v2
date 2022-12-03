@@ -1,0 +1,42 @@
+GET http://localhost:9004/test
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9004/test
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9004/test
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:9004/test
+Accept: */*
+Cache-Control: no-cache
+
+<> 2022-12-02T031809.500.json
+
+###
+
+GET http://localhost:9004/test
+Accept: */*
+Cache-Control: no-cache
+
+<> 2022-12-02T120020.500.json
+
+###
+
+GET http://localhost:9004/test
+Accept: */*
+Cache-Control: no-cache
+
+<> 2022-12-02T115545.500.json
+
+###
+

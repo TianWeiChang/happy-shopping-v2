@@ -1,0 +1,11 @@
+com\tian\entity\AdminUser.class
+com\tian\constants\ResultCode.class
+com\tian\dto\UserLoginDTO.class
+com\tian\entity\MallUser.class
+com\tian\entity\UserPointsVO.class
+com\tian\entity\UserPoints.class
+com\tian\service\MallAdminService.class
+com\tian\service\UserPointsService.class
+com\tian\vo\MallUserVO.class
+com\tian\vo\UserListVO.class
+com\tian\service\MallUserService.class

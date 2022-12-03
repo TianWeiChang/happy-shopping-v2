@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tian.dao.UserPointsMapper">
+  <resultMap id="BaseResultMap" type="com.tian.entity.UserPoints">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="points" jdbcType="INTEGER" property="points" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, user_name, points, create_time, update_time
+  </sql>
+  <select id="selectByUserId" parameterType="Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_user_points
+    where user_id = #{userId,jdbcType=BIGINT}
+  </select>
+  <select id="findPointsList" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_user_points
+    <if test="start!=null and limit!=null">
+      limit #{start},#{limit}
+    </if>
+  </select>
+  <select id="findCount" resultType="int">
+    select count(1)
+    from tb_user_points
+  </select>
+  <insert id="insert" parameterType="com.tian.entity.AdminUser">
+    insert into tb_user_points (id, user_id,user_name, points, create_time, update_time)
+    values (#{id,jdbcType=BIGINT},#{userId,jdbcType=BIGINT}, #{userName,jdbcType=VARCHAR} , #{points,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updatePointsByUserId" parameterType="com.tian.entity.UserPoints">
+    update tb_user_points
+    set points = #{points,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=BIGINT}
+  </update>
+</mapper>

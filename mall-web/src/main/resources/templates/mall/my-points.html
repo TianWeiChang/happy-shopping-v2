@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="mall/header::head-fragment('快乐购物商场-我的积分','points')">
+</head>
+<body>
+<header th:replace="mall/header::header-fragment"></header>
+<!-- nav -->
+<nav th:replace="mall/header::nav-fragment"></nav>
+
+<!-- personal -->
+<div id="personal">
+    <div class="self-info center">
+
+        <!-- sidebar -->
+        <div th:replace="mall/personal-sidebar::sidebar-fragment"></div>
+
+        <div class="intro fr">
+            <div class="uc-box uc-main-box">
+                <div class="uc-content-box points-list-box">
+
+                    <div class="modal-body">
+                        <form id="personalInfoForm">
+                            <div class="form-group">
+                                <label class="control-label">当前积分 : </label>
+                                <span   th:text="${userPoints.points}">0</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+
+<div th:replace="mall/footer::footer-fragment"></div>
+
+<!-- jQuery -->
+<script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
+<script th:src="@{/mall/js/search.js}" type="text/javascript"></script>
+
+</body>
+</html>

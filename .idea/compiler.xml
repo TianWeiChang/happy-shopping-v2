@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mall-user-api" />
+        <module name="mall-credit-service" />
+        <module name="mall-user-service" />
+        <module name="mall-web" />
+        <module name="mall-order-api" />
+        <module name="mall-marketing-service" />
+        <module name="mall-marketing-api" />
+        <module name="mall-mq" />
+        <module name="mall-order-service" />
+        <module name="mall-job" />
+        <module name="mall-admin" />
+        <module name="mall-common-service" />
+        <module name="mall-goods-service" />
+        <module name="mall-goods-api" />
+        <module name="mall-credit-api" />
+        <module name="mall-common-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mall-trade" target="1.8" />
+      <module name="mall-trade-api" target="1.5" />
+      <module name="mall-trade-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="happy-shopping-v2" options="-parameters" />
+      <module name="mall-admin" options="-parameters" />
+      <module name="mall-common" options="" />
+      <module name="mall-credit" options="-parameters" />
+      <module name="mall-credit-api" options="-parameters" />
+      <module name="mall-credit-service" options="-parameters" />
+      <module name="mall-goods" options="" />
+      <module name="mall-goods-api" options="-parameters" />
+      <module name="mall-goods-service" options="-parameters" />
+      <module name="mall-job" options="" />
+      <module name="mall-marketing" options="-parameters" />
+      <module name="mall-marketing-api" options="-parameters" />
+      <module name="mall-marketing-service" options="-parameters" />
+      <module name="mall-mq" options="-parameters" />
+      <module name="mall-order" options="" />
+      <module name="mall-order-api" options="-parameters" />
+      <module name="mall-order-service" options="-parameters" />
+      <module name="mall-trade" options="" />
+      <module name="mall-trade-api" options="" />
+      <module name="mall-trade-service" options="-parameters" />
+      <module name="mall-user" options="-parameters" />
+      <module name="mall-user-api" options="" />
+      <module name="mall-user-service" options="-parameters" />
+      <module name="mall-web" options="-parameters -bootclasspath &quot;C:\Program Files\Java\jdk1.8.0_151\jre\lib\rt.jar&quot;" />
+    </option>
+  </component>
+</project>

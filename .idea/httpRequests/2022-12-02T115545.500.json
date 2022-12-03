@@ -1,0 +1,7 @@
+{
+  "timestamp": "2022-12-02T03:55:44.421+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Failed to invoke the method getGoodsListByIds in the service com.tian.service.MallGoodsService. No provider available for the service com.tian.service.MallGoodsService from registry localhost:2181 on the consumer 192.168.0.101 using the dubbo version 3.0.5. Please check if the providers have been started and registered.",
+  "path": "/test"
+}
