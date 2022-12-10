@@ -19,7 +19,7 @@ public class RabbitConfig {
 
     //队列 起名：TestDirectQueue
     @Bean
-    public Queue LoginLogDirectQueue() {
+    public Queue loginLogDirectQueue() {
         // durable:是否持久化,默认是false,持久化队列：会被存储在磁盘上，当消息代理重启时仍然存在，暂存队列：当前连接有效
         // exclusive:默认也是false，只能被当前创建的连接使用，而且当连接关闭后队列即被删除。此参考优先级高于durable
         // autoDelete:是否自动删除，当没有生产者或者消费者使用此队列，该队列会自动删除。
@@ -29,13 +29,18 @@ public class RabbitConfig {
     }
 
     @Bean
-    public Queue OrderDirectQueue() {
+    public Queue orderDirectQueue() {
         return new Queue(RabbitMQConstants.ORDER_QUEUE, true);
     }
 
     @Bean
-    public Queue ProductDirectQueue() {
+    public Queue productDirectQueue() {
         return new Queue(RabbitMQConstants.PRODUCT_QUEUE, true);
+    }
+
+    @Bean
+    public Queue sendCodeQueue() {
+        return new Queue(RabbitMQConstants.SEND_CODE, true);
     }
 
     @Bean
@@ -43,19 +48,27 @@ public class RabbitConfig {
         return new DirectExchange(RabbitMQConstants.FANOUT_EXCHANGE);
     }
 
-    //3个binding将交换机和相应队列连起来
     @Bean
-    public Binding bindingLoginLoge() {
-        return BindingBuilder.bind(LoginLogDirectQueue()).to(directExchange()).with(RabbitMQConstants.LOGIN_LOG_ROUTING_KEY);
+    public DirectExchange directSendCodeExchange() {
+        return new DirectExchange(RabbitMQConstants.SEND_CODE_EXCHANGE);
+    }
+    @Bean
+    public Binding bindingSendCode() {
+        return BindingBuilder.bind(sendCodeQueue()).to(directExchange()).with(RabbitMQConstants.SEND_CODE_ROUTING_KEY);
     }
 
+    @Bean
+    public Binding bindingLoginLoge() {
+        return BindingBuilder.bind(loginLogDirectQueue()).to(directExchange()).with(RabbitMQConstants.LOGIN_LOG_ROUTING_KEY);
+    }
 
     @Bean
     public Binding bindingOrder() {
-        return BindingBuilder.bind(OrderDirectQueue()).to(directExchange()).with(RabbitMQConstants.ORDER_ROUTING_KEY);
+        return BindingBuilder.bind(orderDirectQueue()).to(directExchange()).with(RabbitMQConstants.ORDER_ROUTING_KEY);
     }
     @Bean
     public Binding bindingProduct() {
-        return BindingBuilder.bind(OrderDirectQueue()).to(directExchange()).with(RabbitMQConstants.Product_ROUTING_KEY);
+        return BindingBuilder.bind(orderDirectQueue()).to(directExchange()).with(RabbitMQConstants.Product_ROUTING_KEY);
     }
+
 }

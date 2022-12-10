@@ -28,7 +28,7 @@ public class MallUserServiceImpl implements MallUserService {
     private MallUserMapper mallUserMapper;
 
 
-    @DubboReference(version = "1.0.0")
+    @DubboReference(version = "1.0.0", check = false)
     private UserCreditService userCreditService;
 
 

@@ -25,9 +25,9 @@ import java.util.Map;
 @Controller
 public class GoodsController {
 
-    @DubboReference(version = "1.0.0",check = false)
+    @DubboReference(version = "1.0.0", check = false)
     private MallGoodsService mallGoodsService;
-    @DubboReference(version = "1.0.0")
+    @DubboReference(version = "1.0.0", check = false)
     private MallCategoryService mallCategoryService;
 
     @GetMapping({"/search", "/search.html"})

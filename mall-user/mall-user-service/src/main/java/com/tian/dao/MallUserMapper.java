@@ -29,4 +29,6 @@ public interface MallUserMapper {
     int getTotalMallUsers(UserListVO userListVO);
 
     int lockUserBatch(@Param("ids") Integer[] ids, @Param("lockStatus") int lockStatus);
+
+    int checkPhone(String phone);
 }

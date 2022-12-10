@@ -34,7 +34,7 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
-        HttpSession session = request.getSession();
+       /* HttpSession session = request.getSession();
         if (null == request.getSession().getAttribute("loginUserId")) {
             response.sendRedirect(request.getContextPath() + "/login");
             return false;
@@ -51,8 +51,9 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
             } catch (Exception e) {
                 logger.info("用户登录,sessionId={}", session.getId());
             }
-            return false;
-        }
+            rturn false;e
+        }*/
+        return true;
     }
 
     @Override

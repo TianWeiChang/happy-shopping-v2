@@ -5,7 +5,6 @@ import java.util.Iterator;
 import java.util.Random;
 
 public final class StringUtils {
-    private static final String ALPHA_NUMERIC = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final Random RANDOM = new Random();
 
     public static String toString(Object target) {

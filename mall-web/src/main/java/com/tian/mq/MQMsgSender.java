@@ -23,11 +23,11 @@ public class MQMsgSender {
     @Resource
     RabbitTemplate rabbitTemplate;
 
-    @PostConstruct
+ /*   @PostConstruct
     public void initRabbitTemplate() {
         // 设置生产者消息确认
         rabbitTemplate.setConfirmCallback(new RabbitConfirmCallback());
-    }
+    }*/
 
     /**
      * 发送登录日志
@@ -66,5 +66,15 @@ public class MQMsgSender {
         map.put("createTime", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         CorrelationData correlationData = new CorrelationData(userId.toString());
         rabbitTemplate.convertAndSend(RabbitMQConstants.FANOUT_EXCHANGE, RabbitMQConstants.CART_ROUTING_KEY, map, correlationData);
+    }
+
+    public void sendCode(String phone, String code) {
+
+        Map<String, Object> map = new HashMap<>(8);
+        map.put("messageId", phone);
+        map.put("messageData", code);
+        map.put("createTime", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        CorrelationData correlationData = new CorrelationData(phone);
+        rabbitTemplate.convertAndSend(RabbitMQConstants.FANOUT_EXCHANGE, RabbitMQConstants.SEND_CODE_ROUTING_KEY, map, correlationData);
     }
 }

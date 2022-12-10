@@ -181,4 +181,7 @@
             #{id}
         </foreach>
     </update>
+    <select id="checkPhone" resultType="int">
+        SELECT COUNT(1) FROM tb_mall_user where login_name = #{phone}
+    </select>
 </mapper>

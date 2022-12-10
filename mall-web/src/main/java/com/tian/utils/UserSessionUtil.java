@@ -14,4 +14,5 @@ public class UserSessionUtil {
         }
         return (MallUserVO)sessionObj;
     }
+
 }

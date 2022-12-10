@@ -16,6 +16,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 import java.util.Date;
 import java.util.Map;
 
@@ -81,4 +82,5 @@ public class MQMsgReceiver {
         logger.info("receiver 购物车数据更新：userId={},更新数量={}", userId, cartCount);
         redisUtil.set(RedisCacheKey.USER_CART_COUNT_KEY + userId, cartCount == null ? 0 : cartCount);
     }
+
 }
