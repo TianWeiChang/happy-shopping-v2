@@ -1,7 +1,6 @@
 package com.tian.service.impl;
 
 import com.tian.config.RedisDistributedLockUtil;
-import com.tian.config.RedisUtil;
 import com.tian.dto.AddUserCreditDto;
 import com.tian.dto.CreditDetailDto;
 import com.tian.dto.ModifyCreditDto;
@@ -14,9 +13,9 @@ import com.tian.mapper.UserCreditMapper;
 import com.tian.service.UserCreditService;
 import com.tian.utils.Result;
 import com.tian.utils.ResultGenerator;
-import org.apache.dubbo.config.annotation.DubboService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -66,11 +65,16 @@ public class UserCreditServiceImpl implements UserCreditService {
         if (userCredit != null) {
             return ResultGenerator.genSuccessResult("添加成功");
         }
-        userCredit = new UserCredit();
-        userCredit.setUserId(userCreditDto.getUserId());
-        userCredit.setCredit(userCreditDto.getCredit());
-        int flag = userCreditMapper.insert(userCredit);
-        if (flag == 1) {
+        try {
+            userCredit = new UserCredit();
+            userCredit.setUserId(userCreditDto.getUserId());
+            userCredit.setCredit(userCreditDto.getCredit());
+            int flag = userCreditMapper.insert(userCredit);
+
+            if (flag == 1) {
+                return ResultGenerator.genSuccessResult("添加成功");
+            }
+        }catch (DuplicateKeyException ex){
             return ResultGenerator.genSuccessResult("添加成功");
         }
         return ResultGenerator.genFailResult("添加失败");
