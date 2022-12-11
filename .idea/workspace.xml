@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2022-12-02T031809.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2022-12-02T115545.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2022-12-02T120020.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+    <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="方法命名修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-mq/src/main/java/com/tian/receiver/InitUserCreditMqMsgReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-mq/src/main/java/com/tian/receiver/InitUserCreditMqMsgReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-user/mall-user-api/target/mall-user-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/mall-user-api/target/mall-user-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-user/mall-user-api/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/mall-user-api/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-user/mall-user-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/mall-user-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-user/mall-user-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/mall-user-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-user/mall-user-service/src/main/java/com/tian/service/UserRegisterDubboServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/mall-user-service/src/main/java/com/tian/service/UserRegisterDubboServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -710,7 +699,7 @@
       <workItem from="1670546854573" duration="9611000" />
       <workItem from="1670632800099" duration="1198000" />
       <workItem from="1670658009168" duration="9076000" />
-      <workItem from="1670720991366" duration="18919000" />
+      <workItem from="1670720991366" duration="19727000" />
     </task>
     <task id="LOCAL-00001" summary="初始化代码提交">
       <created>1670054769046</created>
@@ -775,7 +764,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670762502699</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="方法命名修改">
+      <created>1670762568514</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670762568514</updated>
+    </task>
+    <task id="LOCAL-00011" summary="方法命名修改">
+      <created>1670762591139</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670762591139</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
