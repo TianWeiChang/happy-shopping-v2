@@ -39,7 +39,7 @@ public class MQMsgSender {
         map.put("messageData", messageData);
         map.put("createTime", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         CorrelationData correlationData = new CorrelationData(messageId);
-        rabbitTemplate.convertAndSend(RabbitMQConstants.FANOUT_EXCHANGE, RabbitMQConstants.CART_ROUTING_KEY, map,correlationData);
+        rabbitTemplate.convertAndSend(RabbitMQConstants.FANOUT_EXCHANGE, RabbitMQConstants.CART_ROUTING_KEY, map, correlationData);
         logger.info("user cart success：{}", JSON.toJSONString(messageId));
     }
 
@@ -53,17 +53,12 @@ public class MQMsgSender {
         map.put("messageData", messageData);
         map.put("createTime", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         CorrelationData correlationData = new CorrelationData(messageId);
-        rabbitTemplate.convertAndSend(RabbitMQConstants.FANOUT_EXCHANGE, RabbitMQConstants.LOGIN_LOG_ROUTING_KEY, map,correlationData);
+        rabbitTemplate.convertAndSend(RabbitMQConstants.FANOUT_EXCHANGE, RabbitMQConstants.LOGIN_LOG_ROUTING_KEY, map, correlationData);
         logger.info("sent success：{}", JSON.toJSONString(messageId));
     }
 
-    public void sendProductAdd(Integer productId, Integer addCount){
-
-        Map<String, Object> map = new HashMap<>();
-        map.put("messageId", productId);
-        map.put("messageData", addCount);
-        map.put("createTime", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-        CorrelationData correlationData = new CorrelationData(productId.toString());
-        rabbitTemplate.convertAndSend(RabbitMQConstants.FANOUT_EXCHANGE, RabbitMQConstants.Product_ROUTING_KEY, map,correlationData);
+    public void sendInitUserCredit(Long userId) {
+        logger.info("sendInitUserCredit userId={}", userId);
+        rabbitTemplate.convertAndSend(RabbitMQConstants.FANOUT_EXCHANGE, RabbitMQConstants.INIT_USER_CREDIT_ROUTING_KEY, userId);
     }
 }

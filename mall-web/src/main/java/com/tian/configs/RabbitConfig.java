@@ -38,6 +38,8 @@ public class RabbitConfig {
         return new Queue(RabbitMQConstants.PRODUCT_QUEUE, true);
     }
 
+
+
     @Bean
     public Queue sendCodeQueue() {
         return new Queue(RabbitMQConstants.SEND_CODE, true);
@@ -52,6 +54,7 @@ public class RabbitConfig {
     public DirectExchange directSendCodeExchange() {
         return new DirectExchange(RabbitMQConstants.SEND_CODE_EXCHANGE);
     }
+
     @Bean
     public Binding bindingSendCode() {
         return BindingBuilder.bind(sendCodeQueue()).to(directExchange()).with(RabbitMQConstants.SEND_CODE_ROUTING_KEY);
@@ -66,9 +69,11 @@ public class RabbitConfig {
     public Binding bindingOrder() {
         return BindingBuilder.bind(orderDirectQueue()).to(directExchange()).with(RabbitMQConstants.ORDER_ROUTING_KEY);
     }
+
     @Bean
     public Binding bindingProduct() {
         return BindingBuilder.bind(orderDirectQueue()).to(directExchange()).with(RabbitMQConstants.Product_ROUTING_KEY);
     }
+
 
 }

@@ -69,7 +69,7 @@ public class MQMsgSender {
     }
 
     public void sendCode(String phone, String code) {
-
+        logger.info("send code phone={} code={}", phone, code);
         Map<String, Object> map = new HashMap<>(8);
         map.put("messageId", phone);
         map.put("messageData", code);

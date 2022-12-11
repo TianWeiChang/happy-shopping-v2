@@ -23,5 +23,5 @@ public interface UserRegisterDubboService {
      * @param registerDto 注册信息
      * @return 是否注册成功
      */
-    Result doRegister(RegisterDto registerDto);
+    Result doRegister(RegisterDto registerDto) throws Exception;
 }

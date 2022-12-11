@@ -1,14 +1,18 @@
 package com.tian.service;
 
+import com.tian.dao.InitUserCreditTmpMapper;
 import com.tian.dao.MallUserMapper;
 import com.tian.dto.RegisterDto;
+import com.tian.entity.InitUserCreditTmp;
 import com.tian.entity.MallUser;
+import com.tian.mq.MQMsgSender;
 import com.tian.utils.MD5Util;
 import com.tian.utils.Result;
 import com.tian.utils.ResultGenerator;
 import com.tian.utils.StringUtils;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
@@ -31,6 +35,10 @@ public class UserRegisterDubboServiceImpl implements UserRegisterDubboService {
 
     @Resource
     private MallUserMapper mallUserMapper;
+    @Resource
+    private MQMsgSender mqMsgSender;
+    @Resource
+    private InitUserCreditTmpMapper initUserCreditTmpMapper;
 
     @Override
     public Result checkPhone(String phone) {
@@ -42,35 +50,21 @@ public class UserRegisterDubboServiceImpl implements UserRegisterDubboService {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public Result doRegister(RegisterDto registerDto) {
+    public Result doRegister(RegisterDto registerDto) throws Exception {
         MallUser registerUser = new MallUser();
         registerUser.setLoginName(registerDto.getPhone());
         registerUser.setNickName(registerDto.getPhone());
         registerUser.setPasswordMd5(MD5Util.MD5Encode(registerDto.getPassword(), "UTF-8"));
         if (mallUserMapper.insertSelective(registerUser) > 0) {
+            InitUserCreditTmp initUserCreditTmp = new InitUserCreditTmp();
+            initUserCreditTmp.setUserId(registerUser.getUserId());
+            initUserCreditTmp.setStatus(0);
+            int flag = initUserCreditTmpMapper.insert(initUserCreditTmp);
+            if (flag != 1) {
+                throw new Exception("入库本地变量表失败");
+            }
+            mqMsgSender.sendInitUserCredit(registerUser.getUserId());
 
-            /*
-             * 此时就涉及到分布式事务了，也就是说 Transactional 注解是没用了。
-             * UserCreditDto userCreditDto = new UserCreditDto();
-             * userCreditDto.setCredit(0);
-             *  userCreditDto.setUserId(registerUser.getUserId());
-             * //初始化积分
-             * Result<String> result = userCreditDubboService.initUserCredit(userCreditDto);
-             *
-             *
-             *  if (result.getResultCode() == ResultGenerator.RESULT_CODE_SUCCESS) {
-             *    return ResultGenerator.genSuccessResult("注册成功");
-             * }
-             **/
-
-            //为了让架构没那么复杂，我们来使用本地表做
-
-            /**
-             * 思路：
-             * 1、创建一张临时表：init_user_credit_tmp(id,userId,status(未创建、已创建))
-             * 2、发送消息到MQ中，消费者去拉取消息，然后初始化用户积分
-             * 3、另外，启动一个单独定时任务去处理消息用户
-             */
             return ResultGenerator.genSuccessResult("注册成功");
 
         }

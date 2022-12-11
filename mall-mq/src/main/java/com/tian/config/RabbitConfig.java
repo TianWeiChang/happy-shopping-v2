@@ -41,10 +41,19 @@ public class RabbitConfig {
         return new Queue(RabbitMQConstants.SEND_CODE, true);
     }
 
+    @Bean
+    public Queue initUserCreditDirectQueue() {
+        return new Queue(RabbitMQConstants.INIT_USER_CREDIT_QUEUE, true);
+    }
 
     @Bean
     public DirectExchange directExchange() {
         return new DirectExchange(RabbitMQConstants.FANOUT_EXCHANGE);
+    }
+
+    @Bean
+    public DirectExchange directExchangeInitUserCredit() {
+        return new DirectExchange(RabbitMQConstants.INIT_USER_CREDIT__EXCHANGE);
     }
 
     //3个binding将交换机和相应队列连起来
@@ -67,5 +76,10 @@ public class RabbitConfig {
     @Bean
     public Binding bindingSendCode() {
         return BindingBuilder.bind(sendCodeQueue()).to(directExchange()).with(RabbitMQConstants.SEND_CODE_ROUTING_KEY);
+    }
+
+    @Bean
+    public Binding bindingInitUserCredit() {
+        return BindingBuilder.bind(initUserCreditDirectQueue()).to(directExchangeInitUserCredit()).with(RabbitMQConstants.INIT_USER_CREDIT_ROUTING_KEY);
     }
 }
