@@ -34,7 +34,7 @@ public class InitUserCreditMqMsgReceiver {
             userCreditDto.setUserId(userId);
             userCreditDubboService.initUserCredit(userCreditDto);
         } catch (Exception ex) {
-            logger.error("消息消费失败，", ex);
+            logger.error("初始化积分账户：消息消费失败，", ex);
         }
     }
 }

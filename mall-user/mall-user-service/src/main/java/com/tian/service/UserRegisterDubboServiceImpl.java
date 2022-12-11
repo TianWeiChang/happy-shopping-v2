@@ -64,9 +64,7 @@ public class UserRegisterDubboServiceImpl implements UserRegisterDubboService {
                 throw new Exception("入库本地变量表失败");
             }
             mqMsgSender.sendInitUserCredit(registerUser.getUserId());
-
             return ResultGenerator.genSuccessResult("注册成功");
-
         }
         return ResultGenerator.genSuccessResult("注册失败");
     }

@@ -42,7 +42,7 @@
       <module name="mall-goods" options="" />
       <module name="mall-goods-api" options="-parameters" />
       <module name="mall-goods-service" options="-parameters" />
-      <module name="mall-job" options="" />
+      <module name="mall-job" options="-parameters" />
       <module name="mall-marketing" options="-parameters" />
       <module name="mall-marketing-api" options="-parameters" />
       <module name="mall-marketing-service" options="-parameters" />

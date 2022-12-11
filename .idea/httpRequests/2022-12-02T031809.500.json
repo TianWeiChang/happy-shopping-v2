@@ -1,7 +1,0 @@
-{
-  "timestamp": "2022-12-02T07:18:09.028+0000",
-  "status": 500,
-  "error": "Internal Server Error",
-  "message": "No provider available from registry localhost:2181 for service com.tian.service.MallGoodsService on consumer 192.168.0.101 use dubbo version 3.0.2.1, please check status of providers(disabled, not registered or in blacklist).",
-  "path": "/test"
-}
