@@ -30,7 +30,7 @@ public class InitUserCreditMqMsgReceiver {
     private UserCreditDubboService userCreditDubboService;
 
     @RabbitHandler
-    public void processLoginLog(Long userId) {
+    public void process(Long userId) {
         try {
             logger.info("初始化积分账户 userId={}", userId);
             UserCreditDto userCreditDto = new UserCreditDto();
