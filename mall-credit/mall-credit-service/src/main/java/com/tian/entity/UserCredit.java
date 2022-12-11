@@ -9,6 +9,9 @@ public class UserCredit implements Serializable {
 
     private Integer credit;
 
+    private Integer preCredit;
+
+
     private static final long serialVersionUID = 1L;
 
     public Integer getId() {
@@ -35,6 +38,14 @@ public class UserCredit implements Serializable {
         this.credit = credit;
     }
 
+    public Integer getPreCredit() {
+        return preCredit;
+    }
+
+    public void setPreCredit(Integer preCredit) {
+        this.preCredit = preCredit;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -44,6 +55,7 @@ public class UserCredit implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", userId=").append(userId);
         sb.append(", credit=").append(credit);
+        sb.append(", preCredit=").append(preCredit);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

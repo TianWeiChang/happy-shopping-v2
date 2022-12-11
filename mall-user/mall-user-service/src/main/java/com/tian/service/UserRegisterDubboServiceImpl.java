@@ -2,7 +2,6 @@ package com.tian.service;
 
 import com.tian.dao.MallUserMapper;
 import com.tian.dto.RegisterDto;
-import com.tian.dto.UserCreditDto;
 import com.tian.entity.MallUser;
 import com.tian.utils.MD5Util;
 import com.tian.utils.Result;
@@ -28,7 +27,7 @@ public class UserRegisterDubboServiceImpl implements UserRegisterDubboService {
 
 
     @DubboReference(version = "1.0.0", check = false)
-    private UserCreditService userCreditService;
+    private UserCreditDubboService userCreditDubboService;
 
     @Resource
     private MallUserMapper mallUserMapper;
@@ -56,7 +55,7 @@ public class UserRegisterDubboServiceImpl implements UserRegisterDubboService {
              * userCreditDto.setCredit(0);
              *  userCreditDto.setUserId(registerUser.getUserId());
              * //初始化积分
-             * Result<String> result = userCreditService.initUserCredit(userCreditDto);
+             * Result<String> result = userCreditDubboService.initUserCredit(userCreditDto);
              *
              *
              *  if (result.getResultCode() == ResultGenerator.RESULT_CODE_SUCCESS) {

@@ -49,7 +49,7 @@ public class MallOrderServiceImpl implements MallOrderService {
     private MallGoodsService mallGoodsService;
 
     @DubboReference(version = "1.0.0")
-    private UserCreditService userCreditService;
+    private UserCreditDubboService userCreditDubboService;
 
     @Resource
     private OrderRemindMapper orderRemindMapper;
@@ -421,7 +421,7 @@ public class MallOrderServiceImpl implements MallOrderService {
                     modifyCreditDto.setOrderNo(mallOrder.getOrderNo());
                     modifyCreditDto.setUserId(userId);
                     // TODO: 2022/12/2 改成MQ
-                    userCreditService.addCredit(modifyCreditDto);
+                    userCreditDubboService.addCredit(modifyCreditDto);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

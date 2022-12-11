@@ -6,7 +6,6 @@ import com.tian.dao.MallUserMapper;
 import com.tian.dto.UserCreditDto;
 import com.tian.dto.UserLoginDTO;
 import com.tian.entity.MallUser;
-import com.tian.entity.UserPoints;
 import com.tian.enums.ServiceResultEnum;
 import com.tian.mq.MQMsgSender;
 import com.tian.utils.*;
@@ -14,11 +13,8 @@ import com.tian.vo.MallUserVO;
 import com.tian.vo.UserListVO;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.annotation.DubboService;
-import org.apache.dubbo.config.annotation.Reference;
-import org.apache.dubbo.config.annotation.Service;
 
 import javax.annotation.Resource;
-import java.util.Date;
 import java.util.List;
 
 @DubboService(version = "1.0.0")
@@ -29,7 +25,7 @@ public class MallUserServiceImpl implements MallUserService {
 
 
     @DubboReference(version = "1.0.0", check = false)
-    private UserCreditService userCreditService;
+    private UserCreditDubboService userCreditDubboService;
 
 
     @Resource
@@ -61,7 +57,7 @@ public class MallUserServiceImpl implements MallUserService {
             userCreditDto.setCredit(0);
             userCreditDto.setUserId(registerUser.getUserId());
             //初始化积分
-            Result<String> result = userCreditService.initUserCredit(userCreditDto);
+            Result<String> result = userCreditDubboService.initUserCredit(userCreditDto);
             if (result.getResultCode() == ResultGenerator.RESULT_CODE_SUCCESS) {
                 return ServiceResultEnum.SUCCESS.getResult();
             }

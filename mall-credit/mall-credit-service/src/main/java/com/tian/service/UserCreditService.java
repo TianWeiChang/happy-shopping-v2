@@ -8,12 +8,9 @@ import com.tian.utils.Result;
 /**
  * @author tianwc 公众号：java后端技术全栈、面试专栏
  * @version 1.0.0
- * @date 2022年11月27日 11:04
- * <p>
- * 用户积分
+ * @date 2022年12月11日 10:00
  */
 public interface UserCreditService {
-
     /**
      * 用户积分查询
      *
@@ -57,4 +54,20 @@ public interface UserCreditService {
      * @return 积分明细
      */
     Result findUserCreditList(Integer userId, Integer start, Integer pageSize);
+
+    /**
+     * 预扣减积分
+     *
+     * @param modifyCreditDto 扣减积分参数
+     * @return 是否成功
+     */
+    Result preReduceCredit(ModifyCreditDto modifyCreditDto) throws Exception;
+
+    /**
+     * 扣减积分
+     *
+     * @param modifyCreditDto 扣减积分参数
+     * @return 是否成功
+     */
+    Result doReduceCredit(ModifyCreditDto modifyCreditDto);
 }

@@ -13,7 +13,11 @@ public enum CreditTypeEnum {
     /**
      * 扣减积分
      */
-    REDUCE(1, "扣减积分");
+    REDUCE(1, "扣减积分"),
+    /**
+     * 预扣减
+     */
+    PRE_REDUCE(2, "预扣减积分");
     private int code;
     private String msg;
 

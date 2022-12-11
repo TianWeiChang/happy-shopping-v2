@@ -7,9 +7,11 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserCreditMapper {
     int insert(UserCredit record);
 
-    UserCredit selectByPrimaryKey(Long id);
+    UserCredit selectByPrimaryKey(Integer id);
 
     UserCredit selectByUserId(Long userId);
 
     int updateByPrimaryKey(UserCredit record);
+
+    int updateByUserId(UserCredit userCredit);
 }
