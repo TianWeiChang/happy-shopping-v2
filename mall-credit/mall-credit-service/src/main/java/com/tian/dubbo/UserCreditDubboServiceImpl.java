@@ -34,7 +34,7 @@ public class UserCreditDubboServiceImpl implements UserCreditDubboService {
     }
 
     @Override
-    public Result<UserCreditDto> addCredit(ModifyCreditDto modifyCreditDto) {
+    public Result addCredit(ModifyCreditDto modifyCreditDto) {
         try {
             return userCreditService.addCredit(modifyCreditDto);
         } catch (Exception e) {
@@ -43,7 +43,7 @@ public class UserCreditDubboServiceImpl implements UserCreditDubboService {
     }
 
     @Override
-    public Result<UserCreditDto> reduceCredit(ModifyCreditDto modifyCreditDto) {
+    public Result reduceCredit(ModifyCreditDto modifyCreditDto) {
         try {
             return userCreditService.reduceCredit(modifyCreditDto);
         } catch (Exception e) {
