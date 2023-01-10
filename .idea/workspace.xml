@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="方法命名修改">
+    <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/mall-common-api/src/main/java/com/tian/enums/ServiceResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/mall-common-api/src/main/java/com/tian/enums/ServiceResultEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/mall-order-api/src/main/java/com/tian/service/MallCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/mall-order-api/src/main/java/com/tian/service/MallCartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/MallCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/MallCartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/UserRemindServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/UserRemindServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-user/mall-user-api/target/mall-user-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/mall-user-api/target/mall-user-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/com/tian/controller/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/com/tian/controller/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/用户注册.md" beforeDir="false" afterPath="$PROJECT_DIR$/用户注册.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/电商项目：提醒商家发货.md" beforeDir="false" afterPath="$PROJECT_DIR$/电商项目：提醒商家发货.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,9 +47,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response11.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -546,7 +551,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.MallOrderApplication">
     <configuration name="T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tian.test.T" />
       <module name="mall-user-service" />
@@ -580,6 +585,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MallGoodsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mall-goods-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tian.MallGoodsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MallJobApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="mall-job" />
       <extension name="coverage">
@@ -593,15 +611,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MallMQApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mall-mq" />
+    <configuration name="MallOrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mall-order-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.tian.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tian.MallMQApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tian.MallOrderApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -620,35 +638,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MallWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mall-web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tian.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tian.MallWebApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.T" />
       <item itemvalue="Spring Boot.MallAdminApplication" />
       <item itemvalue="Spring Boot.MallUserApplication" />
-      <item itemvalue="Spring Boot.MallWebApplication" />
-      <item itemvalue="Spring Boot.MallMQApplication" />
       <item itemvalue="Spring Boot.MallJobApplication" />
       <item itemvalue="Spring Boot.MallCreditApplication" />
-      <item itemvalue="Application.T" />
+      <item itemvalue="Spring Boot.MallGoodsApplication" />
+      <item itemvalue="Spring Boot.MallOrderApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MallJobApplication" />
+        <item itemvalue="Spring Boot.MallOrderApplication" />
         <item itemvalue="Spring Boot.MallCreditApplication" />
+        <item itemvalue="Spring Boot.MallGoodsApplication" />
+        <item itemvalue="Spring Boot.MallJobApplication" />
         <item itemvalue="Application.T" />
-        <item itemvalue="Spring Boot.MallWebApplication" />
-        <item itemvalue="Spring Boot.MallMQApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -699,7 +704,14 @@
       <workItem from="1670546854573" duration="9611000" />
       <workItem from="1670632800099" duration="1198000" />
       <workItem from="1670658009168" duration="9076000" />
-      <workItem from="1670720991366" duration="19727000" />
+      <workItem from="1670720991366" duration="22620000" />
+      <workItem from="1670802436393" duration="580000" />
+      <workItem from="1670812744217" duration="6265000" />
+      <workItem from="1670889662191" duration="3295000" />
+      <workItem from="1671327705678" duration="5213000" />
+      <workItem from="1671497778273" duration="1175000" />
+      <workItem from="1671679916159" duration="1205000" />
+      <workItem from="1673319546919" duration="2689000" />
     </task>
     <task id="LOCAL-00001" summary="初始化代码提交">
       <created>1670054769046</created>
@@ -778,7 +790,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670762591139</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="方法命名修改">
+      <created>1670763378867</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670763378867</updated>
+    </task>
+    <task id="LOCAL-00013" summary="方法命名修改">
+      <created>1670764301775</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670764301775</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -813,7 +839,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/UserRemindServiceImpl.java</url>
-          <line>71</line>
+          <line>76</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

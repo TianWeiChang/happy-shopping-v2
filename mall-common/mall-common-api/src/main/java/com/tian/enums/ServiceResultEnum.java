@@ -60,6 +60,8 @@ public enum ServiceResultEnum {
 
     OPERATE_ERROR("操作失败！"),
 
+    ORDER_REMINDED("已提醒过商家！"),
+
     NO_PERMISSION_ERROR("无权限！"),
     /**
      * 初始化积分失败

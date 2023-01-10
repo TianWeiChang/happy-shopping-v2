@@ -41,12 +41,9 @@ public class MallCartServiceImpl implements MallCartService {
     private MQMsgSender mqMsgSender;
 
     @Override
-    public String saveNewBeeMallCartItem(MallShoppingCartItem mallShoppingCartItem, Long userId) {
-
-
-        String lockKey = RedisCacheKey.GOODS_STOCK_NUM_LOCK_KEY + userId;
+    public String saveMallCartItem(MallShoppingCartItem mallShoppingCartItem, Long userId) {
 //        String lockKey = RedisCacheKey.GOODS_STOCK_NUM_LOCK_KEY + mallShoppingCartItem.getGoodsId();
-        //锁住当前货物，防止多线程同时操作，导致超卖
+        String lockKey = RedisCacheKey.GOODS_STOCK_NUM_LOCK_KEY + userId;
         String lock = redisLockV2.tryLock(lockKey, 5000L);
 
         try {

@@ -76,12 +76,12 @@ public class ShoppingCartController {
      */
     @PostMapping("/shop-cart")
     @ResponseBody
-    public Result saveNewBeeMallShoppingCartItem(@RequestBody MallShoppingCartItem mallShoppingCartItem,
-                                                 HttpSession httpSession) {
+    public Result saveMallShoppingCartItem(@RequestBody MallShoppingCartItem mallShoppingCartItem,
+                                           HttpSession httpSession) {
         MallUserVO user = UserSessionUtil.userSession(httpSession);
         mallShoppingCartItem.setUserId(user.getUserId());
 
-        String saveResult = mallCartService.saveNewBeeMallCartItem(mallShoppingCartItem, user.getUserId());
+        String saveResult = mallCartService.saveMallCartItem(mallShoppingCartItem, user.getUserId());
         //添加成功
         if (ServiceResultEnum.SUCCESS.getResult().equals(saveResult)) {
             int oldCount = (int) redisUtil.get(RedisCacheKey.USER_CART_COUNT_KEY + mallShoppingCartItem.getUserId());
@@ -99,8 +99,8 @@ public class ShoppingCartController {
      */
     @PutMapping("/shop-cart")
     @ResponseBody
-    public Result updateNewBeeMallShoppingCartItem(@RequestBody MallShoppingCartItem mallShoppingCartItem,
-                                                   HttpSession httpSession) {
+    public Result updateMallShoppingCartItem(@RequestBody MallShoppingCartItem mallShoppingCartItem,
+                                             HttpSession httpSession) {
         MallUserVO user = UserSessionUtil.userSession(httpSession);
         mallShoppingCartItem.setUserId(user.getUserId());
         CartItemDTO cartItemDTO = mallCartService.updateNewBeeMallCartItem(mallShoppingCartItem, user.getUserId());
@@ -121,8 +121,8 @@ public class ShoppingCartController {
      */
     @DeleteMapping("/shop-cart/{mallShoppingCartItemId}")
     @ResponseBody
-    public Result updateNewBeeMallShoppingCartItem(@PathVariable("mallShoppingCartItemId") Long mallShoppingCartItemId,
-                                                   HttpSession httpSession) {
+    public Result updateMallShoppingCartItem(@PathVariable("mallShoppingCartItemId") Long mallShoppingCartItemId,
+                                             HttpSession httpSession) {
         MallUserVO user = UserSessionUtil.userSession(httpSession);
         Boolean deleteResult = mallCartService.deleteById(mallShoppingCartItemId, user.getUserId());
         //删除成功

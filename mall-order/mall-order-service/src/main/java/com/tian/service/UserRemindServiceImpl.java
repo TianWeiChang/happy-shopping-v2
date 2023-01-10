@@ -32,7 +32,11 @@ public class UserRemindServiceImpl implements UserRemindService {
             if (!userId.equals(mallOrder.getUserId())) {
                 return ServiceResultEnum.NO_PERMISSION_ERROR.getResult();
             }
-            OrderRemind orderRemind = new OrderRemind();
+            OrderRemind orderRemind =  orderRemindMapper.selectByUserId(userId, mallOrder.getOrderId());
+            if(orderRemind!=null){
+                return ServiceResultEnum.ORDER_REMINDED.getResult();
+            }
+            orderRemind = new OrderRemind();
             orderRemind.setOrderId(mallOrder.getOrderId());
             orderRemind.setUserId(userId);
             orderRemind.setUserName(userName);
@@ -42,6 +46,7 @@ public class UserRemindServiceImpl implements UserRemindService {
             if (flag > 0) {
                 return ServiceResultEnum.SUCCESS.getResult();
             }
+            // TODO: 2023/1/10 这里也可以改成消息队列，异步落库
         }
         return ServiceResultEnum.OPERATE_ERROR.getResult();
     }

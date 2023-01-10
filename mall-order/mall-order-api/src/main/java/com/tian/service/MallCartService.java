@@ -12,7 +12,7 @@ public interface MallCartService {
     /**
      * 保存商品至购物车中
      */
-    String saveNewBeeMallCartItem(MallShoppingCartItem mallShoppingCartItem, Long userId);
+    String saveMallCartItem(MallShoppingCartItem mallShoppingCartItem, Long userId);
 
     /**
      * 修改购物车中的属性
