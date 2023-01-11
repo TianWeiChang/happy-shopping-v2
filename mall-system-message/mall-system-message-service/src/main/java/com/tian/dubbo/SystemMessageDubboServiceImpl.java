@@ -111,7 +111,7 @@ public class SystemMessageDubboServiceImpl implements SystemMessageDubboService 
         if (flag == 1) {
             //新增成功时，把站内信模板放入到Redis缓存中
             try {
-                Thread.sleep(200L);
+                Thread.sleep(500L);
                 //延迟双删
                 redisTemplate.delete(cacheKey);
             } catch (InterruptedException e) {
