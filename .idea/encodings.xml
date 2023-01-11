@@ -20,6 +20,9 @@
     <file url="file://$PROJECT_DIR$/mall-order" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-order/mall-order-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-order/mall-order-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-system-message" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-system-message/mall-system-message-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-system-message/mall-system-message-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-user/mall-user-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-user/mall-user-service" charset="UTF-8" />

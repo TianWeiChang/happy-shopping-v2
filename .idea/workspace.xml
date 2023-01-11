@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="">
+    <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="站内信模板添加、查询、修改">
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-api/src/main/java/com/tian/dto/SystemMessageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-api/src/main/java/com/tian/service/SystemMessageDubboService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/mall-system-message-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/SystemMessageApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/config/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/dubbo/SystemMessageDubboServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/entity/SystemMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/mapper/SystemMessageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/service/SystemMessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/service/impl/SystemMessageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/resources/mapper/SystemMessageMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-common/mall-common-api/src/main/java/com/tian/enums/ServiceResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/mall-common-api/src/main/java/com/tian/enums/ServiceResultEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-order/mall-order-api/src/main/java/com/tian/service/MallCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/mall-order-api/src/main/java/com/tian/service/MallCartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/MallCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/MallCartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/UserRemindServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/UserRemindServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-user/mall-user-api/target/mall-user-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/mall-user-api/target/mall-user-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/com/tian/controller/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/com/tian/controller/ShoppingCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/用户注册.md" beforeDir="false" afterPath="$PROJECT_DIR$/用户注册.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/电商项目：提醒商家发货.md" beforeDir="false" afterPath="$PROJECT_DIR$/电商项目：提醒商家发货.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/mall-common-api/src/main/java/com/tian/constants/RedisCacheKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/mall-common-api/src/main/java/com/tian/constants/RedisCacheKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +69,7 @@
   </component>
   <component name="ProjectId" id="270eE0KUYCKYSaAxd9R4k3fn6xQ" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -65,30 +78,30 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mall-user/mall-user-service/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/config" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workspace\other\happy-shopping-v2\mall-trade\mall-trade-service\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.tian.dao" />
-      <recent name="com.tian.entity" />
-      <recent name="com.tian.utils" />
-      <recent name="com.tian.mapper" />
-      <recent name="com.tian.configs" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\other\github\happy-shopping-v2\mall-system-message\mall-system-message-service\src\main\java\com\tian\config" />
+      <recent name="E:\other\github\happy-shopping-v2\mall-system-message\mall-system-message-service\src\main\resources\mapper" />
+      <recent name="E:\other\github\happy-shopping-v2\mall-system-message\mall-system-message-service\src\main\resources" />
       <recent name="E:\other\github\happy-shopping-v2\mall-user\mall-user-service\src\main\resources\mapper" />
       <recent name="E:\other\github\happy-shopping-v2\mall-credit\mall-credit-service\src\main\java\com\tian\config" />
-      <recent name="E:\workspace\other\happy-shopping-v2\mall-marketing\mall-marketing-service\src\main\resources\mapper" />
-      <recent name="E:\workspace\other\happy-shopping-v2\mall-marketing\mall-marketing-api\src\main\java" />
-      <recent name="E:\workspace\other\happy-shopping-v2\mall-credit\mall-credit-service\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tian.entity" />
+      <recent name="com.tian.mapper" />
+      <recent name="com.tian.dao" />
+      <recent name="com.tian.utils" />
+      <recent name="com.tian.configs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace\other\happy-shopping-v2\mall-trade\mall-trade-service\src\main\resources" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -551,20 +564,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MallOrderApplication">
-    <configuration name="T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tian.test.T" />
-      <module name="mall-user-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tian.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.SystemMessageApplication">
     <configuration name="MallAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="mall-admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.tian.MallAdminApplication" />
@@ -638,22 +638,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SystemMessageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mall-system-message-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tian.SystemMessageApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.T" />
       <item itemvalue="Spring Boot.MallAdminApplication" />
       <item itemvalue="Spring Boot.MallUserApplication" />
       <item itemvalue="Spring Boot.MallJobApplication" />
       <item itemvalue="Spring Boot.MallCreditApplication" />
       <item itemvalue="Spring Boot.MallGoodsApplication" />
       <item itemvalue="Spring Boot.MallOrderApplication" />
+      <item itemvalue="Spring Boot.SystemMessageApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SystemMessageApplication" />
         <item itemvalue="Spring Boot.MallOrderApplication" />
         <item itemvalue="Spring Boot.MallCreditApplication" />
         <item itemvalue="Spring Boot.MallGoodsApplication" />
         <item itemvalue="Spring Boot.MallJobApplication" />
-        <item itemvalue="Application.T" />
       </list>
     </recent_temporary>
   </component>
@@ -711,7 +724,8 @@
       <workItem from="1671327705678" duration="5213000" />
       <workItem from="1671497778273" duration="1175000" />
       <workItem from="1671679916159" duration="1205000" />
-      <workItem from="1673319546919" duration="2689000" />
+      <workItem from="1673319546919" duration="9517000" />
+      <workItem from="1673398938069" duration="7994000" />
     </task>
     <task id="LOCAL-00001" summary="初始化代码提交">
       <created>1670054769046</created>
@@ -804,7 +818,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670764301775</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="部分代码优化">
+      <created>1673337316942</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673337316942</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -832,7 +853,8 @@
     <MESSAGE value="用户注册完成，积分账户同步开立" />
     <MESSAGE value="防止同一个用户创建多个积分账户" />
     <MESSAGE value="方法命名修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="方法命名修改" />
+    <MESSAGE value="部分代码优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="部分代码优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

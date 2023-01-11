@@ -19,6 +19,7 @@
         <module>mall-goods</module>
         <module>mall-credit</module>
         <module>mall-marketing</module>
+        <module>mall-system-message</module>
     </modules>
 
     <name>happy-shopping-v2</name>
@@ -64,6 +65,11 @@
             <dependency>
                 <groupId>com.tian</groupId>
                 <artifactId>mall-user-api</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tian</groupId>
+                <artifactId>mall-system-message-api</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
