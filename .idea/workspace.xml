@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -705,7 +704,7 @@
       <workItem from="1671497778273" duration="1175000" />
       <workItem from="1671679916159" duration="1205000" />
       <workItem from="1673319546919" duration="9517000" />
-      <workItem from="1673398938069" duration="8252000" />
+      <workItem from="1673398938069" duration="8317000" />
     </task>
     <task id="LOCAL-00001" summary="初始化代码提交">
       <created>1670054769046</created>
@@ -812,7 +811,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673421352663</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="文档补充">
+      <created>1673421606390</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673421606390</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -842,7 +848,8 @@
     <MESSAGE value="方法命名修改" />
     <MESSAGE value="部分代码优化" />
     <MESSAGE value="站内信模板添加、查询、修改、删除" />
-    <option name="LAST_COMMIT_MESSAGE" value="站内信模板添加、查询、修改、删除" />
+    <MESSAGE value="文档补充" />
+    <option name="LAST_COMMIT_MESSAGE" value="文档补充" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
