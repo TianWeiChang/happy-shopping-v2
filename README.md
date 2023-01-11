@@ -1,5 +1,10 @@
-# happy-shopping-v2
-电商项目 Spring Boot +Dubbo+Zookeeper+Redis+Mybatis+RabbitMQ+MySQL+OSS
+
+
+如果喜欢，请点个右上角 star 小星星
+
+电商项目，技术栈
+ 
+ > Spring Boot +Dubbo+Zookeeper+Redis+Mybatis+RabbitMQ+MySQL+OSS
 
 ## 功能
 - 用户注册
