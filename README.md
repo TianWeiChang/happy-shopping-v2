@@ -4,6 +4,8 @@
 
 电商项目，技术栈
 
+![](http://tianwc.oss-cn-beijing.aliyuncs.com/dev/20230115/1673797164592.png)
+
  > Spring Boot +Dubbo+Zookeeper+Redis+Mybatis+RabbitMQ+MySQL+OSS
 
 ## 功能
@@ -44,6 +46,7 @@
 
 ## 项目架构图
 
+![项目架构图第一版](http://tianwc.oss-cn-beijing.aliyuncs.com/dev/20230115/1673797112386.png)
 
 ## 功能设计
 
