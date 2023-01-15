@@ -2,10 +2,11 @@
 
 如果喜欢，请点个右上角 star 小星星
 
-电商项目，技术栈
+## 快乐购物
 
 ![](http://tianwc.oss-cn-beijing.aliyuncs.com/dev/20230115/1673797164592.png)
 
+## 技术栈
  > Spring Boot +Dubbo+Zookeeper+Redis+Mybatis+RabbitMQ+MySQL+OSS
 
 ## 功能
@@ -56,7 +57,7 @@
 
 
 
-
+> 页面部分参考 蜂鸟商城项目
 
 
 
