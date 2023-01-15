@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mall-common/mall-common-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-admin/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-admin/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-credit/mall-credit-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-credit/mall-credit-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-goods/mall-goods-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-goods/mall-goods-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-job/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-job/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-marketing/mall-marketing-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-marketing/mall-marketing-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-mq/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-mq/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-user/mall-user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/mall-user-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -718,7 +706,7 @@
       <workItem from="1673319546919" duration="9517000" />
       <workItem from="1673398938069" duration="12924000" />
       <workItem from="1673483936684" duration="1170000" />
-      <workItem from="1673753655154" duration="2399000" />
+      <workItem from="1673753655154" duration="2602000" />
     </task>
     <task id="LOCAL-00001" summary="初始化代码提交">
       <created>1670054769046</created>
@@ -853,7 +841,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673429733411</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="项目中的子项目端口统一化和文档补充">
+      <created>1673796440001</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1673796440001</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -885,7 +880,8 @@
     <MESSAGE value="站内信模板添加、查询、修改、删除" />
     <MESSAGE value="延迟时间设置" />
     <MESSAGE value="文档补充" />
-    <option name="LAST_COMMIT_MESSAGE" value="文档补充" />
+    <MESSAGE value="项目中的子项目端口统一化和文档补充" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目中的子项目端口统一化和文档补充" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
