@@ -44,7 +44,10 @@
 
 ## 项目架构图
 
-积分服务设计：[电商项目：积分服务，对用户注册完成后，初始化积分账户进行补充。](https://wx.zsxq.com/dweb2/index/columns/48418244881248)
+用户注册：[用户注册设计](https://wx.zsxq.com/dweb2/index/columns/48418244881248)
+
+积分服务：[用户积分服务的设计](https://wx.zsxq.com/dweb2/index/columns/48418244881248)
+
 
 
 
