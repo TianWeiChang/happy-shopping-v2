@@ -84,18 +84,22 @@ public class UserMessageDubboServiceImpl implements UserMessageDubboService {
         if (StringUtils.isEmpty(cache)) {
             //缓存击穿
             boolean lock = redisDistributedLock.lock(KEY_PRE + userMessageAddDto.getMessageId());
-            if (lock) {
-                cache = redisTemplate.opsForValue().get(RedisCacheKey.SYSTEM_MESSAGE_TEMPLATE_PRE + userMessageAddDto.getMessageId());
-                //再次检查
-                if (StringUtils.isEmpty(cache)) {
-                    systemMessage = systemMessageService.selectByPrimaryKey(userMessageAddDto.getMessageId());
-                    if (systemMessage == null) {
-                        //缓存穿透
-                        redisTemplate.opsForValue().set(RedisCacheKey.SYSTEM_MESSAGE_TEMPLATE_PRE + userMessageAddDto.getMessageId(), JSON.toJSONString(new SystemMessage()));
-                        return ResultGenerator.genFailResult("模板不存在");
+            try {
+                if (lock) {
+                    cache = redisTemplate.opsForValue().get(RedisCacheKey.SYSTEM_MESSAGE_TEMPLATE_PRE + userMessageAddDto.getMessageId());
+                    //再次检查
+                    if (StringUtils.isEmpty(cache)) {
+                        systemMessage = systemMessageService.selectByPrimaryKey(userMessageAddDto.getMessageId());
+                        if (systemMessage == null) {
+                            //缓存穿透
+                            redisTemplate.opsForValue().set(RedisCacheKey.SYSTEM_MESSAGE_TEMPLATE_PRE + userMessageAddDto.getMessageId(), JSON.toJSONString(new SystemMessage()));
+                            return ResultGenerator.genFailResult("模板不存在");
+                        }
+                        redisTemplate.opsForValue().set(RedisCacheKey.SYSTEM_MESSAGE_TEMPLATE_PRE + userMessageAddDto.getMessageId(), JSON.toJSONString(systemMessage));
                     }
-                    redisTemplate.opsForValue().set(RedisCacheKey.SYSTEM_MESSAGE_TEMPLATE_PRE + userMessageAddDto.getMessageId(), JSON.toJSONString(systemMessage));
                 }
+            }finally {
+                redisDistributedLock.unlock(KEY_PRE + userMessageAddDto.getMessageId());
             }
         }
         return null;

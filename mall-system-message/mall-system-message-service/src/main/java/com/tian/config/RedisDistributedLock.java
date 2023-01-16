@@ -46,7 +46,7 @@ public class RedisDistributedLock {
         });
     }
 
-    public void delete(String key) {
+    public void unlock(String key) {
         redisTemplate.delete(LOCK_PREFIX + key);
     }
 }

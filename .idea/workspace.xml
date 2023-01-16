@@ -1,38 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="文档补充">
-      <change afterPath="$PROJECT_DIR$/mall-mq/src/main/java/com/tian/message/UserMessageAddMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-mq/src/main/java/com/tian/receiver/UserMessageMsgReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-mq/src/main/java/com/tian/util/UserMessageConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-api/src/main/java/com/tian/dto/UserMessageAddDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-api/src/main/java/com/tian/dto/UserMessageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-api/src/main/java/com/tian/dto/UserMessageQueryReqDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-api/src/main/java/com/tian/dto/UserMessageQueryRespDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-api/src/main/java/com/tian/dto/UserMessageUpdateReqDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-api/src/main/java/com/tian/service/UserMessageDubboService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/config/RedisDistributedLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/dubbo/UserMessageDubboServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/entity/UserMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/mapper/UserMessageMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/service/UserMessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/service/impl/UserMessageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/util/UserMessageConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/resources/mapper/UserMessageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-common/mall-common-api/src/main/java/com/tian/mq/RabbitMQConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/mall-common-api/src/main/java/com/tian/mq/RabbitMQConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-common/mall-common-api/src/main/java/com/tian/utils/BeanUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/mall-common-api/src/main/java/com/tian/utils/BeanUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-goods/mall-goods-service/src/main/java/com/tian/configs/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-goods/mall-goods-service/src/main/java/com/tian/configs/RabbitConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-mq/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-mq/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-mq/src/main/java/com/tian/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-mq/src/main/java/com/tian/config/RabbitConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-mq/src/main/java/com/tian/receiver/MQMsgReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-mq/src/main/java/com/tian/receiver/MQMsgReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/configs/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/configs/RabbitConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/MallOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-order/mall-order-service/src/main/java/com/tian/service/MallOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-user/mall-user-service/src/main/java/com/tian/configs/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-user/mall-user-service/src/main/java/com/tian/configs/RabbitConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/com/tian/configs/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/com/tian/configs/RabbitConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/com/tian/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/com/tian/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/config/RedisDistributedLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/config/RedisDistributedLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/dubbo/UserMessageDubboServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/dubbo/UserMessageDubboServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -738,7 +710,7 @@
       <workItem from="1673398938069" duration="12924000" />
       <workItem from="1673483936684" duration="1170000" />
       <workItem from="1673753655154" duration="4169000" />
-      <workItem from="1673830729406" duration="15715000" />
+      <workItem from="1673830729406" duration="16458000" />
     </task>
     <task id="LOCAL-00001" summary="初始化代码提交">
       <created>1670054769046</created>
@@ -922,7 +894,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673797445886</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="站内信基本完成">
+      <created>1673876633061</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1673876633061</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -955,7 +934,8 @@
     <MESSAGE value="延迟时间设置" />
     <MESSAGE value="项目中的子项目端口统一化和文档补充" />
     <MESSAGE value="文档补充" />
-    <option name="LAST_COMMIT_MESSAGE" value="文档补充" />
+    <MESSAGE value="站内信基本完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="站内信基本完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
