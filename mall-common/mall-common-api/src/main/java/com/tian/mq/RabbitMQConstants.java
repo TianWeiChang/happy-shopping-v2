@@ -14,6 +14,7 @@ public interface RabbitMQConstants {
 
 
     String LOGIN_LOG_QUEUE = "LoginLogDirectQueue";
+    String USER_MESSAGE_QUEUE = "UserMessageDirectQueue";
     String ORDER_QUEUE = "OrderDirectQueue";
     String PRODUCT_QUEUE = "ProductDirectQueue";
     String CART_QUEUE = "ProductDirectQueue";

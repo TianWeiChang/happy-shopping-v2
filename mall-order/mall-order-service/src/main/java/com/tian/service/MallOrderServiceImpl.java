@@ -200,29 +200,36 @@ public class MallOrderServiceImpl implements MallOrderService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = {MallException.class, Exception.class})
     public String saveOrder(MallUserVO user, List<ShoppingCartItemVO> myShoppingCartItems) {
         logger.info("订单提交");
+        //购物车
         List<Long> itemIdList = myShoppingCartItems.stream().map(ShoppingCartItemVO::getCartItemId).collect(Collectors.toList());
+        //商品id
         List<Long> goodsIds = myShoppingCartItems.stream().map(ShoppingCartItemVO::getGoodsId).collect(Collectors.toList());
+
+        //通过商品id查询商品信息
         List<GoodsInfo> goodInfos = mallGoodsService.getGoodsListByIds(goodsIds);
         //检查是否包含已下架商品
         List<GoodsInfo> goodsListNotSelling = goodInfos.stream()
                 .filter(newBeeMallGoodsTemp -> newBeeMallGoodsTemp.getGoodsSellStatus() != Constants.SELL_STATUS_UP)
                 .collect(Collectors.toList());
+
         if (!CollectionUtils.isEmpty(goodsListNotSelling)) {
             //goodsListNotSelling 对象非空则表示有下架商品
             MallException.fail(goodsListNotSelling.get(0).getGoodsName() + "已下架，无法生成订单");
         }
-        Map<Long, GoodsInfo> newBeeMallGoodsMap = goodInfos.stream().collect(Collectors.toMap(GoodsInfo::getGoodsId, Function.identity(), (entity1, entity2) -> entity1));
+
+        //商品id---商品信息
+        Map<Long, GoodsInfo> goodsInfoMap = goodInfos.stream().collect(Collectors.toMap(GoodsInfo::getGoodsId, Function.identity(), (entity1, entity2) -> entity1));
         //判断商品库存
         for (ShoppingCartItemVO shoppingCartItemVO : myShoppingCartItems) {
             //查出的商品中不存在购物车中的这条关联商品数据，直接返回错误提醒
-            if (!newBeeMallGoodsMap.containsKey(shoppingCartItemVO.getGoodsId())) {
+            if (!goodsInfoMap.containsKey(shoppingCartItemVO.getGoodsId())) {
                 MallException.fail(ServiceResultEnum.SHOPPING_ITEM_ERROR.getResult());
             }
             //存在数量大于库存的情况，直接返回错误提醒
-            if (shoppingCartItemVO.getGoodsCount() > newBeeMallGoodsMap.get(shoppingCartItemVO.getGoodsId()).getStockNum()) {
+            if (shoppingCartItemVO.getGoodsCount() > goodsInfoMap.get(shoppingCartItemVO.getGoodsId()).getStockNum()) {
                 MallException.fail(ServiceResultEnum.SHOPPING_ITEM_COUNT_ERROR.getResult());
             }
         }

@@ -16,7 +16,6 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.io.IOException;
 import java.util.Date;
 import java.util.Map;
 
@@ -37,7 +36,7 @@ public class MQMsgReceiver {
     /**
      * 登录日志记录
      */
-    @RabbitListener(queues = RabbitMQConstants.LOGIN_LOG_QUEUE)
+    @RabbitListener(queues = RabbitMQConstants.USER_MESSAGE_QUEUE)
     @RabbitHandler
     public void processLoginLog(Message message, Channel channel, Map testMessage) {
         logger.info("receiver login log msg：{}", JSON.toJSONString(testMessage));

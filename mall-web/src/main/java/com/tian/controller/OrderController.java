@@ -81,7 +81,7 @@ public class OrderController {
     public String saveOrder(HttpSession httpSession) {
 
         MallUserVO user = UserSessionUtil.userSession(httpSession);
-        //获取用户购物车信息
+        //通过session中的userId 获取该用户购物车信息
         List<ShoppingCartItemVO> myShoppingCartItems = mallCartService.getMyShoppingCartItems(user.getUserId());
         //是否填写好地址
         if (StringUtils.isEmpty(user.getAddress().trim())) {

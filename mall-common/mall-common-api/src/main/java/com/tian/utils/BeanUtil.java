@@ -1,9 +1,6 @@
 package com.tian.utils;
 
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.BeanWrapper;
-import org.springframework.beans.BeanWrapperImpl;
-import org.springframework.beans.PropertyAccessorFactory;
+import org.springframework.beans.*;
 
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
@@ -19,6 +16,9 @@ public abstract class BeanUtil {
         return target;
     }
 
+    public static void copyProperties(Object source, Object target) throws BeansException {
+        BeanUtils.copyProperties(source, target);
+    }
     public static <T> List<T> copyList(List sources, Class<T> clazz) {
         return copyList(sources, clazz, null);
     }

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tian.mapper.UserMessageMapper">
+    <resultMap id="BaseResultMap" type="com.tian.entity.UserMessage">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="message_id" property="messageId" jdbcType="BIGINT"/>
+        <result column="receiver_name" property="receiverName" jdbcType="VARCHAR"/>
+        <result column="receiver_id" property="receiverId" jdbcType="BIGINT"/>
+        <result column="read" property="read" jdbcType="INTEGER"/>
+        <result column="deleted" property="deleted" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="message_content" property="messageContent" jdbcType="LONGVARCHAR" />
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from tb_user_message
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.tian.entity.UserMessage">
+        <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into tb_user_message (message_id, receiver_name, receiver_id,
+        `read`, deleted, create_time, update_time, message_content)
+        values (#{messageId,jdbcType=BIGINT}, #{receiverName,jdbcType=VARCHAR}, #{receiverId,jdbcType=BIGINT},
+        #{read,jdbcType=INTEGER}, #{deleted,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP},
+        #{updateTime,jdbcType=TIMESTAMP}, #{messageContent,jdbcType=LONGVARCHAR})
+    </insert>
+    <update id="updateByPrimaryKey" parameterType="com.tian.entity.UserMessage">
+    update tb_user_message
+    set message_id = #{messageId,jdbcType=BIGINT},
+      receiver_name = #{receiverName,jdbcType=VARCHAR},
+      receiver_id = #{receiverId,jdbcType=BIGINT},
+      `read` = #{read,jdbcType=INTEGER},
+      deleted = #{deleted,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      message_content = #{messageContent,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select id, message_id, receiver_name, receiver_id, `read`, deleted, create_time, 
+    update_time, message_content
+    from tb_user_message
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+    <select id="findUserMessageList" resultMap="BaseResultMap" parameterType="com.tian.dto.UserMessageQueryReqDto">
+        select id, message_id, receiver_name, receiver_id, `read`, deleted, create_time,
+        update_time, message_content
+        from tb_user_message
+        where
+        receiver_id=#{userId}
+        <if test="read!=null">
+            and `read` = #{read}
+        </if>
+        and delete = 0
+        limit #{start},#{pageSize}
+    </select>
+    <select id="findUserMessageCount" resultType="long" parameterType="com.tian.dto.UserMessageQueryReqDto">
+        select count(1)
+        from tb_user_message
+        where
+        receiver_id=#{userId}
+        <if test="read!=null">
+            and `read` = #{read}
+        </if>
+        and delete = 0
+    </select>
+</mapper>
