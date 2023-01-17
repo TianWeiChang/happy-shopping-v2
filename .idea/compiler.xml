@@ -14,17 +14,17 @@
         <module name="mall-order-api" />
         <module name="mall-marketing-service" />
         <module name="mall-marketing-api" />
-        <module name="mall-common-api" />
         <module name="mall-mq" />
         <module name="mall-order-service" />
         <module name="mall-job" />
         <module name="mall-admin" />
         <module name="mall-system-message-api" />
+        <module name="mall-common-service" />
         <module name="mall-goods-service" />
         <module name="mall-goods-api" />
         <module name="mall-system-message-service" />
         <module name="mall-credit-api" />
-        <module name="mall-common-service" />
+        <module name="mall-common-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

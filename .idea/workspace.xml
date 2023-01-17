@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c949632-ad6f-46da-bfcc-d773844689ad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mall-credit/mall-credit-service/src/main/resources/happy-mall-credit.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-marketing/mall-marketing-service/src/main/resources/happy-mall-marketing.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/resources/happy-mall-message.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/config/RedisDistributedLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/config/RedisDistributedLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/dubbo/UserMessageDubboServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-system-message/mall-system-message-service/src/main/java/com/tian/dubbo/UserMessageDubboServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +68,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="main" />
+    </force-push-targets>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -710,7 +717,8 @@
       <workItem from="1673398938069" duration="12924000" />
       <workItem from="1673483936684" duration="1170000" />
       <workItem from="1673753655154" duration="4169000" />
-      <workItem from="1673830729406" duration="16458000" />
+      <workItem from="1673830729406" duration="16506000" />
+      <workItem from="1673925107380" duration="2763000" />
     </task>
     <task id="LOCAL-00001" summary="初始化代码提交">
       <created>1670054769046</created>
@@ -901,7 +909,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673876633061</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="锁释放">
+      <created>1673887539482</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1673887539482</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -935,7 +950,8 @@
     <MESSAGE value="项目中的子项目端口统一化和文档补充" />
     <MESSAGE value="文档补充" />
     <MESSAGE value="站内信基本完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="站内信基本完成" />
+    <MESSAGE value="锁释放" />
+    <option name="LAST_COMMIT_MESSAGE" value="锁释放" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
